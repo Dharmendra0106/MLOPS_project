@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mlProject
+Version: 0.0.0
+Summary: A small python package for ml app
+Home-page: https://github.com/Dharmendra0106/End-to-End-ML-Project
+Author: Dharmendra0106
+Author-email: dharma1997tharun@gmail.com
+Project-URL: Bug_tracker, https://github.com/Dharmendra0106/End-to-End-ML-Project/issues
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MLOPS_project
+MLOps projects
