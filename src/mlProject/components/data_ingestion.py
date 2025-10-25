@@ -3,7 +3,7 @@ import urllib.request as request
 import zipfile
 from mlProject import logger
 from mlProject.utils.common import get_size
-from pathlib import path
+from pathlib import Path
 from mlProject.entity.config_entity import (DataIngestionConfig)
 
 class DataIngestion:
@@ -12,7 +12,7 @@ class DataIngestion:
 
     
 
-    def dowload_file(self):
+    def download_file(self):
         if not os.path.exists(self.config.local_data_file):
             filename, headers = request.urlretrieve(
                 url=self.config.source_URL,
@@ -34,5 +34,7 @@ class DataIngestion:
 
         unzip_path=self.config.unzip_dir
         os.makedirs(unzip_path,exist_ok=True)
-        with zipfile.Zipfile(self.config.local_data_file,'r') as zip_ref:
+        with zipfile.ZipFile(self.config.local_data_file,'r') as zip_ref:
             zip_ref.extractall(unzip_path)
+
+    
